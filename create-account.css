@@ -1,0 +1,301 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+
+
+}
+
+body {
+    background-color: black;
+}
+
+.header {
+    position: absolute;
+    top: 0px;
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    width: 100%;
+}
+
+.header .logo {
+    display: inline-block;
+}
+
+.header .logo img {
+    position: relative;
+    top: 1.5rem;
+    max-width: 20rem;
+    min-height: 20rem;
+
+}
+
+.header .log-in {
+    position: absolute;
+    top: 2.5rem;
+    right: 7rem;
+    z-index: 2;
+    width: 5.5rem;
+    height: 2.5rem;
+    font-family: "Segoe UI", sans-serif;
+
+    background-color: rgb(249, 31, 31);
+    color: aliceblue;
+    border-radius: 0.5rem;
+    font-size: 1.05rem;
+    font-weight: 700;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border: none;
+    cursor: pointer;
+
+}
+
+.main {
+    position: relative;
+    top: 7rem;
+    left: 36rem;
+    min-width: 20rem;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(239, 235, 235);
+    padding: 2rem 2rem;
+    background: #1B1B1B;
+    border-radius: 1rem;
+    box-shadow: 0 0 50px rgba(247, 246, 246, 0.6);
+}
+
+.createaccount {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.main .createaccount input {
+
+    border: 1px solid red;
+    outline: none;
+    background-color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 20px;
+    height: 2rem;
+    font-size: 0.8rem;
+    text-indent: 1rem;
+
+
+}
+
+.name {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+
+}
+
+input::placeholder {
+    position: relative;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+.create_account {
+    position: relative;
+    left: 1.25rem;
+    bottom: 1rem;
+    width: 15rem;
+    height: 2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(249, 31, 31);
+    color: aliceblue;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border: none;
+    cursor: pointer;
+
+}
+
+.top {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: rgb(249, 31, 31);
+    font-family: "Segoe UI", sans-serif;
+}
+
+.privacy {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    color: white;
+}
+
+.privacy input {
+    position: relative;
+    bottom: 0.4rem;
+    accent-color: #1bb675;
+
+}
+
+.continue {
+    position: relative;
+    color: gray;
+    font-size: 0.85rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    bottom: 1rem;
+
+}
+
+.main .Continue_account img {
+
+    width: 44px;
+    border: 0.5 solid grey;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-left: 2rem;
+
+}
+
+.main .Continue_account {
+    position: relative;
+    bottom: 1.8rem;
+    left: 0.65rem;
+}
+
+.main .googleacc {
+    position: fixed;
+    bottom: 1rem;
+    margin-top: 2rem;
+    height: 35rem;
+    width: 20rem;
+    background: white;
+    transition: visibility 200ms;
+    border: 1px solid rgb(226, 213, 213);
+    box-shadow: 0 0 10px rgba(242, 239, 239, 0.9);
+    border-radius: 1rem;
+    z-index: 100;
+    padding: 2rem 2rem;
+    visibility: hidden;
+}
+
+body:has(.main .Continue_account .google:focus) .googleacc {
+    visibility: visible;
+
+}
+
+.Continue_account img {
+    transition: transform 0.3s ease;
+}
+
+.Continue_account img:hover {
+    transform: scale(1.2);
+}
+
+.google_logo {
+    position: absolute;
+    top: -3rem;
+    left: 2.5rem;
+    height: 7rem;
+    width: 10rem;
+}
+
+
+.acc1 {
+    position: relative;
+    top: 5rem;
+    border-top: 1px solid rgb(214, 202, 202);
+    border-bottom: 1px solid rgb(214, 202, 202);
+}
+
+.acc1 img {
+    border: 1px solid rgb(211, 205, 205);
+    min-height: 2rem;
+    max-width: 2rem;
+    border-radius: 50%;
+    position: relative;
+    top: 0.6rem;
+}
+
+.acc1 .topname {
+    position: relative;
+    left: 0.5rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 0.9rem;
+    bottom: 0.5rem;
+
+}
+
+.acc1 .bottom {
+    position: relative;
+    left: 2.5rem;
+    bottom: 0.5rem;
+    color: rgb(166, 165, 165);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 0.8rem;
+
+}
+
+.googleacc .choose {
+    position: relative;
+    top: 3rem;
+    left: 2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(26, 25, 25);
+    font-size: 1.3rem;
+    font-weight: 525;
+
+}
+
+.acc2 {
+    position: relative;
+    top: 4.97rem;
+    height: 3rem;
+    border-top: 1px solid rgb(214, 202, 202);
+    border-bottom: 1px solid rgb(214, 202, 202);
+}
+
+.acc2 i {
+    position: relative;
+    top: 0.7rem;
+    font-size: 1.5rem;
+}
+
+.acc2 .topname1 {
+    position: relative;
+    top: 0.55rem;
+    left: 0.4rem;
+}
+
+
+#blur-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(6px);
+    visibility: hidden;
+    transition: visibility 200ms;
+    z-index: 20;
+}
+
+body:has(.Continue_account .google:focus) #blur-overlay {
+    visibility: visible;
+
+}
+
+.terms {
+    position: relative;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    top: 8.5rem;
+    font-size: 0.8rem;
+}
+
+.terms span {
+    color: blue;
+}
+
+.google_accounts {
+    position: relative;
+    top: 1rem;
+}

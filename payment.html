@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MovieHub/Payment</title>
+  <link rel="stylesheet" href="payment.css" >
+</head>
+<body>
+  <main class="wrap">
+    <header class="top">
+      <img class="brand-logo" src="images/icons/logo.png" alt="MovieHub" height="300px"  width="300px">
+      <div class="secure">
+        <span class="dot"></span>
+        <span>Secure Checkout</span>
+      </div>
+    </header>
+
+    <section class="panel">
+      <h2 class="title">Payment details</h2>
+
+      <div class="cards-row">
+        <div class="card-badge visa">VISA</div>
+        <div class="card-badge mc">MasterCard</div>
+        <div class="card-badge amex">AMEX</div>
+        <div class="card-badge disc">Discover</div>
+      </div>
+
+      <div class="card-preview">
+        <div class="chip"><img src="images/payment/chip.png" alt=""></div>
+        <div class="cardnum">•••• •••• •••• 1234</div>
+        <div class="cardmeta">
+          <div>
+            <span class="lbl">CARDHOLDER</span>
+            <span class="val">Your Name</span>
+          </div>
+          <div>
+            <span class="lbl">EXPIRES</span>
+            <span class="val">--/--</span>
+          </div>
+        </div>
+      </div>
+
+      <form class="form"  action="login.html">
+        <div class="field">
+          <label>Cardholder name</label>
+          <input type="text" placeholder="e.g., Gaurab Koirala" required />
+        </div>
+
+        <div class="field">
+          <label>Card number</label>
+          <input type="text" inputmode="numeric" placeholder="1234 5678 9012 3456" required />
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label>Expiry</label>
+            <input type="text" placeholder="MM/YY" required />
+          </div>
+          <div class="field">
+            <label>CVV</label>
+            <input type="password" inputmode="numeric" placeholder="***" required />
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Email for receipt</label>
+          <input type="email" placeholder="you@example.com" required />
+        </div>
+
+        <label class="check">
+          <input type="checkbox" required />
+          <span>I agree to the Terms & auto-renewal billing.</span>
+        </label>
+
+        <button class="pay-btn" type="submit">Start watching</button></a>
+
+        <p class="mini">
+          By continuing, you authorize MovieHub to charge your payment method for your subscription.
+        </p>
+      </form>
+    </section>
+
+    <footer class="foot">
+      <span>© 2026 MovieHub</span>
+      <span class="sep">•</span>
+      <span>Help</span>
+      <span class="sep">•</span>
+      <span>Privacy</span>
+    </footer>
+  </main>
+</body>
+</html>

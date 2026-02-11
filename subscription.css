@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background: radial-gradient( #1c1c1c, #000);
+    color: white;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    padding: 3rem 1rem 2rem;
+}
+
+header h1 {
+    font-size: 2.4rem;
+    color: #e50914;
+}
+
+header p {
+    color: #ccc;
+    margin-top: 0.5rem;
+}
+
+.toggle {
+    margin-top: 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    background: #111;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.9rem;
+}
+
+.toggle input {
+    width: 40px;
+    height: 20px;
+    accent-color: #e50914;
+}
+
+.plans {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 2rem;
+    padding: 2rem 3rem;
+    flex-wrap: wrap;
+}
+
+.plan {
+    background: linear-gradient(180deg, #1b1b1b, #111);
+    border-radius: 1.2rem;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: 0.3s ease;
+    position: relative;
+    width: 280px;
+}
+
+.plan:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: #e50914;
+    box-shadow: 0 0 25px rgba(229,9,20,0.4);
+}
+
+.plan h2 {
+    font-size: 1.6rem;
+}
+
+.price {
+    font-size: 1.4rem;
+    color: #e50914;
+    margin: 1rem 0;
+}
+
+.plan ul {
+    list-style: none;
+    margin: 1.5rem 0;
+    text-align: left;
+}
+
+.plan ul li {
+    margin: 0.6rem 0;
+    color: #ddd;
+}
+
+.plan button {
+    margin-top: 1rem;
+    background: linear-gradient(135deg, #e50914, #ff1f1f);
+    color: white;
+    border: none;
+    padding: 0.7rem 2rem;
+    border-radius: 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.plan button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(229,9,20,0.6);
+}
+
+.popular {
+    border-color: #e50914;
+    transform: scale(1.05);
+}
+
+.premium {
+    background: linear-gradient(180deg, #2a1a00, #111);
+}
+
+.badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #e50914;
+    padding: 0.3rem 0.8rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    color: #aaa;
+    font-size: 0.85rem;
+}
