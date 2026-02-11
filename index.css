@@ -1,107 +1,165 @@
+/* ===== RESET ===== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.body{
-    
-    position: relative;
-    overflow: hidden;
+
+/* ===== BODY ===== */
+.body {
+    background-color: #000;
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
+/* ===== HEADER ===== */
 .header {
-    min-height: 100vh;
-    max-width: 100%;
+    position: relative;
+    width: 100%;
+    height: 100vh;
     background-color: black;
     overflow: hidden;
-    box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.9);
 }
 
+/* ===== BACKGROUND IMAGE ===== */
 .header .img {
     position: absolute;
-    top:0rem;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
+    inset: 0;
+    z-index: 0;
 }
 
 .header .img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
-
 }
 
-.header .logo {
+
+
+/* ===== LOGO ===== */
+.logo {
     position: relative;
-    bottom: 6rem;
     left: 3rem;
+    bottom: 3rem;
+    width: 350px;
     z-index: 2;
-    width: 22rem;
-    height: 20rem;
+    filter: drop-shadow(0 10px 30px rgba(0,0,0,0.8));
 }
-.header .log-in{
-     position:absolute;
-    top:2.5rem;
-    right: 7rem;
+
+/* ===== LOGIN BUTTON ===== */
+.log-in {
+    position: absolute;
+    top: 2.5rem;
+    right: 3rem;
     z-index: 2;
-    width: 5.5rem;
-    height: 2.5rem;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: rgb(249, 31, 31);
-    color: aliceblue;
-    border-radius: 0.5rem;
-    font-size: 1.05rem;
-    font-weight: 700;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+
+    height: 42px;
+    width: 110px;
+
+    background: linear-gradient(135deg, #e50914, #b20710);
+    color: white;
     border: none;
+    border-radius: 10px;
+
+    font-size: 1rem;
+    font-weight: 700;
     cursor: pointer;
 
+    box-shadow: 0 15px 35px rgba(229, 9, 20, 0.4);
+    transition: all 0.3s ease;
 }
 
-.header button:hover{
-    background-color: rgb(164, 15, 15);
+.log-in:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 20px 45px rgba(229, 9, 20, 0.6);
 }
 
-
+/* ===== TEXT OVERLAY ===== */
 .textoverlay {
     position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  top:16rem;
-  left: 30rem;
-  z-index: 2;
-  color: white;
-  font-size: 3.5rem;
-  font-weight: 900;
-  font-family: sans-serif;
-  text-align: center;
-  
-}
-.textoverlay #toptext{
-    font-size:4rem ;
-}
-
-.create_account{
-    position:absolute;
-    top:32.5rem;
-    right: 38rem;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 2;
-    width: 15rem;
-    height: 3rem;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: rgb(249, 31, 31);
-    color: aliceblue;
-    border-radius: 0.5rem;
-    font-size: 1.5rem;
-    font-weight: 700;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
-    border: none;
-    cursor: pointer;
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    color: white;
 }
 
+.textoverlay #toptext {
+    font-size: 4rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
 
+.textoverlay span {
+    font-size: 2rem;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+.textoverlay .subtext {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    opacity: 0.75;
+}
+
+/* ===== CREATE ACCOUNT BUTTON ===== */
+.create_account {
+    position: absolute;
+    top: 56%;
+    left: 41%;
+    z-index: 2;
+
+    width: 280px;
+    height: 56px;
+
+    background: linear-gradient(135deg, #e50914, #b20710);
+    color: white;
+    border: none;
+    border-radius: 14px;
+
+    font-size: 1.3rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+    box-shadow: 0 25px 60px rgba(229, 9, 20, 0.45);
+    transition: all 0.3s ease;
+}
+
+.create_account:hover {
+     transform: translateY(-2px);
+    box-shadow: 0 30px 80px rgba(229, 9, 20, 0.65);
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+
+    .logo {
+        width: 150px;
+        left: 1.5rem;
+    }
+
+    .log-in {
+        right: 1.5rem;
+    }
+
+    .textoverlay #toptext {
+        font-size: 2.6rem;
+    }
+
+    .textoverlay span {
+        font-size: 1.4rem;
+    }
+
+    .create_account {
+        width: 230px;
+        height: 50px;
+        font-size: 1.1rem;
+    }
+}

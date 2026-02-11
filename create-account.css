@@ -27,8 +27,8 @@ body {
 .header .logo img {
     position: relative;
     top: 1.5rem;
-    max-width: 20rem;
-    min-height: 20rem;
+    width: 350px;
+
 
 }
 

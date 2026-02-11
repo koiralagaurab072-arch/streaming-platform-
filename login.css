@@ -22,9 +22,8 @@ header {
 
 header img {
     position: relative;
-    bottom: 7rem;
-    height: 300px;
-    width: 300px;
+    bottom: 5rem;
+    width: 350px;
 }
 
 form {
