@@ -134,15 +134,13 @@ body:has(#theme-toggle:checked) #logout {
     height: 90vh;
     width: 100vw;
     display: flex;
-    position: relative;
     aspect-ratio: 16/9;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     box-shadow: inset 0 0 500px rgba(0, 0, 0, 0.99), 0 0 500px rgba(0, 0, 0, 0.99);
-    animation: slide 16s infinite;
-
 }
+
 
 
 .slider img {
@@ -151,10 +149,28 @@ body:has(#theme-toggle:checked) #logout {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(100%);
+    filter: brightness(80%);
     z-index: -1;
+ animation: scroll 16s infinite;
 
 }
+@keyframes scroll{
+  0%   { transform: translateX(0%); }
+  20%  { transform: translateX(0%); }
+
+  25%  { transform: translateX(-100%); }
+  45%  { transform: translateX(-100%); }
+
+  50%  { transform: translateX(-200%); }
+  70%  { transform: translateX(-200%); }
+
+  75%  { transform: translateX(-300%); }
+  95%  { transform: translateX(-300%); }
+
+  100% { transform: translateX(-400%); }
+}
+
+
 
 .slider-nav {
     display: flex;
@@ -173,8 +189,8 @@ body:has(#theme-toggle:checked) #logout {
     background-color: #fff;
     opacity: 0.75;
     transition: opacity ease 250ms;
-
 }
+
 
 .slider-nav a:hover {
     background-color: rgb(148, 148, 234);
@@ -215,15 +231,19 @@ body:has(#theme-toggle:checked) #logout {
     position: relative;
     top: 0.5rem;
 }
+.search{
+    max-width: 60dvw;
+}
 
 .search input {
+
     position: absolute;
     font-family: Georgia, 'Times New Roman', Times, serif;
     top: 0.5rem;
     text-align: left;
     text-indent: 1rem;
-    height: 2rem;
-    width: 40em;
+    width: 35%;
+    min-height: 2rem;
     border-radius: 8px;
     border: none;
     color: rgb(250, 247, 247);
@@ -245,8 +265,7 @@ input::placeholder {
 }
 
 .gern_box button {
-    position: relative;
-    left: 40rem;
+   
     color: #fcfbfb;
     background-color: transparent;
     border: none;
@@ -264,6 +283,8 @@ input::placeholder {
 }
 
 .gern_box {
+    position: absolute;
+    right: 30rem;
     display: inline-block;
 }
 
@@ -419,7 +440,7 @@ input::placeholder {
     left: 2rem;
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.9);
     border-radius: 10px;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 
