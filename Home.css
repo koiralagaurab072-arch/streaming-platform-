@@ -44,7 +44,7 @@ body::-webkit-scrollbar {
 }
 
 body:has(#theme-toggle:checked) {
-    background: #edf1ed;
+    background: #fdfefd;
 }
 
 body:has(#theme-toggle:checked) * {
@@ -151,7 +151,7 @@ body:has(#theme-toggle:checked) #logout {
     object-fit: cover;
     filter: brightness(80%);
     z-index: -1;
- animation: scroll 16s infinite;
+ animation: scroll 10s infinite;
 
 }
 @keyframes scroll{
@@ -164,7 +164,7 @@ body:has(#theme-toggle:checked) #logout {
   50%  { transform: translateX(-200%); }
   70%  { transform: translateX(-200%); }
 
-  75%  { transform: translateX(-300%); }
+  75%  { transform: translateX(-300%); } 
   95%  { transform: translateX(-300%); }
 
   100% { transform: translateX(-400%); }
@@ -188,14 +188,22 @@ body:has(#theme-toggle:checked) #logout {
     border-radius: 50%;
     background-color: #fff;
     opacity: 0.75;
-    transition: opacity ease 250ms;
+    animation: smooth;
+    animation: dotActive 10s infinite ;
+    
 }
 
-
-.slider-nav a:hover {
-    background-color: rgb(148, 148, 234);
+@keyframes dotActive{
+  0%   {  background:#fff; }
+  5%   {  background:dodgerblue; } 
+  25%  {   background:dodgerblue; } 
+  26%  { background:#fff; }      
+  100% {  background:#fff; }
 }
-
+.slider-nav a:nth-child(1){ animation-delay: 0s; }
+.slider-nav a:nth-child(2){ animation-delay: 2.5s; }
+.slider-nav a:nth-child(3){ animation-delay: 5s; }
+.slider-nav a:nth-child(4){ animation-delay: 7.5s; }
 
 .navbar {
     position: relative;
@@ -297,7 +305,6 @@ input::placeholder {
     position: absolute;
     display: flex;
     justify-content: space-evenly;
-    right: 30rem;
     height: auto;
     display: none;
     border-radius: 10px;
